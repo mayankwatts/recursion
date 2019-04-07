@@ -9,7 +9,7 @@ int lastIndex(int input[], int size, int x) {
   
   int out=lastIndex(input+1,size-1,x);
   
-  if(input[0]==x && out==-1)
+  if(input[0]==x || out!=-1)
   {
     return out+1;
   }
@@ -18,12 +18,8 @@ int lastIndex(int input[], int size, int x) {
   {
     return out;
   }
-  if(out!=-1)
-  {
-    return out+1;
-  }
-}
 
+}
 
 int main(){
     int n;
